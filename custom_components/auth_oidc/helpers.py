@@ -12,7 +12,7 @@ def get_url(path: str, force_https: bool) -> str:
     base_uri = str(req.url).split("/auth", 2)[0]
     if force_https:
         base_uri = base_uri.replace("http://", "https://")
-    return f"{base_uri}{path}"
+    return f"https://ha.f0rth.space{path}"
 
 
 async def get_view(template: str, parameters: dict | None = None) -> str:
